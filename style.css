@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+:root {
+    /* colors */
+    --Dark-Blue : hsl(240, 38%, 20%) ;
+    --Grayish-Blue : hsla(240, 18%, 77%, 0.191) ;
+
+    /* typography */
+    --font-size : 32px ;
+    --font-inter :'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-size: var(--font-size);
+    font-family: var(--font-inter);
+    background-color: #ffffff;
+   
+}
+
+
+.Person {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    width: 90%;
+    height: 500px;
+    & > .Person_info {
+        position: absolute;
+        max-width: 53%;
+        left: 15%;
+        top: 20%;
+        & > img {
+            position: absolute;
+            left: 15%;
+            width: 15%;
+        }
+
+        & > p {
+            padding-top: 1rem;
+            font-weight: 300 ;
+            margin-top: 40px;
+        }
+
+        & > p::before {
+            content: open-quote;
+        } 
+        & > p::after {
+            content: close-quote;
+        } 
+
+        & > .Person_job {
+            display: flex;
+            margin-top: 35px;
+            /* :nth-child(1) is Text of person Name */
+
+            & > :nth-child(1) {
+                font-size: 18px;
+                color: var(--Dark-Blue);
+                font-weight: 700;
+                margin-right: 1%;
+            }
+
+            /* :nth-child(2) is the text of job like ux engineer */
+
+            & > :nth-child(2) {
+                font-size: 18px;
+                color: grey;
+                font-weight: 500;
+            }
+        }
+    }
+    & .Person_Img {
+        width: 47%;
+        height:100%;
+        position: absolute;
+        right: 0%;
+        top: 0%;
+        z-index: -1;
+
+        /* nth-child(1) is pattern bg is the first img in Person_img class */
+        & img:nth-child(1) {
+            max-width: 90%;
+            position: absolute;
+            z-index: -1;
+        }
+        /* this is Person Image */
+        & img:nth-child(2) {
+            transform: scale(0.7);
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 10px 29px 0px;
+            border-radius: 5px;
+        }
+
+        & .prev_next_icon {
+            position: relative ;
+            bottom: 22%;
+            left: 22%;
+            background-color: white;
+            width: 13%;
+            height: 7%;
+            border-radius:20px ;
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            box-shadow: rgba(100, 100, 111, 0.463) 0px 10px 29px 0px;
+            align-items: center;
+            & img:nth-child(2) {
+                position: absolute;
+                width: 20%;
+                right: 19%;
+            }
+            & img:nth-child(1) {
+                position: absolute;
+                left: 20%;
+                width: 13%;
+            }
+        }
+    }
+}
+
+#bottom_img{
+    position: absolute;
+    bottom: 0%;
+    z-index: -1;
+}
