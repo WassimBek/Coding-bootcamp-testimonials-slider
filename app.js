@@ -25,5 +25,5 @@ next.onclick = () => {
           I'm now  in the job of my dreams and so excited about the future. 
     `
     name.textContent = "Tanya Sinclair"
-    job.textContent = "Tanya Sinclair"
+    job.textContent = "UX Enginner"
 }
