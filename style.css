@@ -23,8 +23,6 @@ body {
    
 }
 
-
-
 @media (max-width: 1440px) {
     .Person {
         display: flex;
@@ -34,13 +32,12 @@ body {
             margin-top: 30px;
             display: grid;
             justify-items: center;
-            grid-template-rows: 32px 200px auto;
+            grid-template-rows: 32px auto auto;
             width: 100%;
             & > img {
                 width: 80px;
             }
             & > p {
-                width: 510px;
                 color: var(--Dark-Blue);
                 line-height: 1.3;
                 padding: 0px 30px;
@@ -48,6 +45,7 @@ body {
                 font-size: 26px;
             }
             & > .Person_job {
+                margin-top: 20px;
                 text-align: center;
                 & > .p1 {
                     font-weight: bold;
