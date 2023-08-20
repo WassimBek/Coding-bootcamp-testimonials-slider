@@ -24,120 +24,6 @@ body {
 }
 
 
-.Person {
-    position: relative;
-    top: 40%;
-    left: 40%;
-    transform: translate(-50%,-50%);
-    display: flex;
-    width: 90%;
-    height: 500px;
-    & > .Person_info {
-        position: absolute;
-        max-width: 53%;
-        left: 24%;
-        top: 20%;
-        & > img {
-            position: absolute;
-            left: 15%;
-            width: 15%;
-        }
-
-        & > p {
-            width: 650px;
-            padding-top: 1rem;
-            font-weight: 300 ;
-            margin-top: 40px;
-        }
-
-        & > p::before {
-            content: open-quote;
-        } 
-        & > p::after {
-            content: close-quote;
-        } 
-
-        & > .Person_job {
-            display: flex;
-            margin-top: 35px;
-            /* :nth-child(1) is Text of person Name */
-
-            & > :nth-child(1) {
-                font-size: 18px;
-                color: var(--Dark-Blue);
-                font-weight: 700;
-                margin-right: 1%;
-            }
-
-            /* :nth-child(2) is the text of job like ux engineer */
-
-            & > :nth-child(2) {
-                font-size: 18px;
-                color: grey;
-                font-weight: 500;
-            }
-        }
-    }
-    & .Person_Img {
-        width: 47%;
-        height:100%;
-        position: absolute;
-        right: 0%;
-        top: 0%;
-        z-index: -1;
-
-        /* nth-child(1) is pattern bg is the first img in Person_img class */
-        & img:nth-child(1) {
-            max-width: 700px;
-            position: absolute;
-            z-index: -1;
-        }
-        /* this is Person Image */
-        & > .pic {
-            width: 775px;
-            transform: scale(0.7);
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 10px 29px 0px;
-            border-radius: 5px;
-            position: absolute;
-            top: -53px;
-            left: -55px;
-            
-        }
-
-        & .prev_next_icon {
-            position: relative;
-            bottom: -116%;
-            left: 14%;
-            background-color: white;
-            width: 124px;
-            height: 50px;
-            border-radius: 25px;
-            z-index: 1;
-            display: flex;
-            justify-content: center;
-            box-shadow: rgba(100, 100, 111, 0.463) 0px 10px 29px 0px;
-            align-items: center;
-            & > #img_next {
-                position: absolute;
-                width: 14%;
-                right: 18%;
-                cursor: pointer;
-            }
-            & > #img_prev {
-                position: absolute;
-                cursor: pointer;
-                left: 15%;
-                width: 13%;
-            }
-        }
-    }
-}
-
-#bottom_img{
-    position: absolute;
-    bottom: 0%;
-    z-index: -1;
-}
 
 @media (max-width: 1440px) {
     .Person {
@@ -148,7 +34,7 @@ body {
             margin-top: 30px;
             display: grid;
             justify-items: center;
-            grid-template-rows: 32px 250px auto;
+            grid-template-rows: 32px 200px auto;
             width: 100%;
             & > img {
                 width: 80px;
