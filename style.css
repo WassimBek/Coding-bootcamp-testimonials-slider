@@ -26,8 +26,8 @@ body {
 
 .Person {
     position: relative;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 40%;
     transform: translate(-50%,-50%);
     display: flex;
     width: 90%;
@@ -35,7 +35,7 @@ body {
     & > .Person_info {
         position: absolute;
         max-width: 53%;
-        left: 15%;
+        left: 24%;
         top: 20%;
         & > img {
             position: absolute;
@@ -44,6 +44,7 @@ body {
         }
 
         & > p {
+            width: 650px;
             padding-top: 1rem;
             font-weight: 300 ;
             margin-top: 40px;
@@ -87,41 +88,45 @@ body {
 
         /* nth-child(1) is pattern bg is the first img in Person_img class */
         & img:nth-child(1) {
-            max-width: 90%;
+            max-width: 700px;
             position: absolute;
             z-index: -1;
         }
         /* this is Person Image */
-        & img:nth-child(2) {
+        & > .pic {
+            width: 775px;
             transform: scale(0.7);
             box-shadow: rgba(100, 100, 111, 0.2) 0px 10px 29px 0px;
             border-radius: 5px;
+            position: absolute;
+            top: -53px;
+            left: -55px;
             
         }
 
         & .prev_next_icon {
-            position: relative ;
-            bottom: 22%;
-            left: 22%;
+            position: relative;
+            bottom: -116%;
+            left: 14%;
             background-color: white;
-            width: 13%;
-            height: 7%;
-            border-radius:20px ;
+            width: 124px;
+            height: 50px;
+            border-radius: 25px;
             z-index: 1;
             display: flex;
             justify-content: center;
             box-shadow: rgba(100, 100, 111, 0.463) 0px 10px 29px 0px;
             align-items: center;
-            & img:nth-child(2) {
+            & > #img_next {
                 position: absolute;
-                width: 20%;
-                right: 19%;
+                width: 14%;
+                right: 18%;
                 cursor: pointer;
             }
-            & img:nth-child(1) {
+            & > #img_prev {
                 position: absolute;
                 cursor: pointer;
-                left: 20%;
+                left: 15%;
                 width: 13%;
             }
         }
@@ -132,4 +137,79 @@ body {
     position: absolute;
     bottom: 0%;
     z-index: -1;
+}
+
+@media (max-width: 1440px) {
+    .Person {
+        display: flex;
+        flex-direction: column-reverse;
+
+        & > .Person_info {
+            margin-top: 30px;
+            display: grid;
+            justify-items: center;
+            grid-template-rows: 32px 250px auto;
+            width: 100%;
+            & > img {
+                width: 80px;
+            }
+            & > p {
+                width: 510px;
+                color: var(--Dark-Blue);
+                line-height: 1.3;
+                padding: 0px 30px;
+                text-align: center;
+                font-size: 26px;
+            }
+            & > .Person_job {
+                text-align: center;
+                & > .p1 {
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+                & > .p2 {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        & > .Person_Img {
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            display: flex;
+            margin-top: 25px;
+            width: 100%;
+            justify-items: center;
+            & > .pic {
+                border-radius: 3px;
+                top: 61px;
+                position: absolute;
+                width: 300px;
+            }
+            & > .shape {
+                width: 387px;
+            }
+            & > .prev_next_icon {
+                top: 343px;
+                position: absolute;
+                border-radius: 25px;
+                padding: 10px 20px;
+                background-color: #ffffff;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                border: 1px solid;
+                & > img {
+                    width: 50%;
+                }
+            }
+        }
+
+    }
+    #bottom_img {
+        position: absolute;
+        bottom: 0;
+        width: 355px;
+    }
 }
