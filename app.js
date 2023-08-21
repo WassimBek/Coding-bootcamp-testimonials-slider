@@ -1,11 +1,10 @@
+const prev = document.getElementById("img_prev");
+const next = document.getElementById("img_next");
+const getImage = document.querySelector(".Person_Img #person");
+const personData = document.querySelector(".Person > .Person_info p");
+const name = document.getElementById("personName");
+const job = document.getElementById("personJob");
 
-
-const prev = document.getElementById("img_prev") ;
-const next = document.getElementById("img_next") ;
-const getImage = document.querySelector(".Person_Img #person") ;
-const personData = document.querySelector(".Person > .Person_info p")
-const name = document.getElementById("personName") ;
-const job = document.getElementById("personJob") ;
 prev.onclick = () => {
     getImage.src = "./images/image-john.jpg"
     personData.textContent = `
@@ -21,9 +20,9 @@ next.onclick = () => {
     getImage.src = "./images/image-tanya.jpg"
     personData.textContent = `
           I've been interested in coding for a while but never taken
-          the jump, until now. I couldn't recommend this course ebough.
+          the jump, until now. I couldn't recommend this course enough.
           I'm now  in the job of my dreams and so excited about the future. 
     `
     name.textContent = "Tanya Sinclair"
-    job.textContent = "Tanya Sinclair"
+    job.textContent = "UX Enginner"
 }
