@@ -119,11 +119,7 @@ body {
 }
 
 @media (max-width : 800px) {
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    
     .Person {
         margin-left: 0px;
         height: 100vh;
@@ -135,8 +131,8 @@ body {
         & > .Person_info {
             max-width: 443px;
             position: absolute;
-            bottom: 135px;
-            margin-left: 0%;
+            bottom: 10%;
+            margin-left: 10%;
             flex-direction: column;
             display: flex;
             justify-items: center;
@@ -169,28 +165,31 @@ body {
         }
 
         & > .Person_Img {
-            display: contents;
+    
+
             & > .pic {
                 border-radius: 3px;
-                top: 34px;
                 position: absolute;
-                width: 370px;
+                bottom: 57%;
+                left: 15%;
+                width: 300px;
             }
             & > .shape {
                 position: absolute;
-                bottom: 437px;
+                bottom: 55%;
+                left: 5%;
                 width: 387px;
             }
             & > .prev_next_icon {
-                top: 350px;
                 position: absolute;
+                top: 40%;
                 border-radius: 25px;
                 padding: 10px 20px;
                 background-color: #ffffff;
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 20px;
-                margin: 0px auto;
+                
                 border: 1px solid;
                 & > #img_next, & > #img_prev {
                     width: 10px;
